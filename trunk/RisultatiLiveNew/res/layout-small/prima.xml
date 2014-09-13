@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/eccellenzaView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/eccellenza" />
+
+        <ImageView
+            android:id="@+id/primaView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/prima_categoria" />
+    </LinearLayout>
+
+    
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout1"
+        android:layout_marginBottom="1dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/serieDView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+             android:layout_marginRight="10dp"
+            android:src="@drawable/seriednew"/>
+
+        <ImageView
+            android:id="@+id/secondaView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/secondacategoria" />
+    </LinearLayout>
+<!--     <LinearLayout -->
+<!--         android:id="@+id/LinearLayout2" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_below="@+id/LinearLayout1" -->
+<!--         android:layout_marginBottom="1dp" -->
+<!--         android:gravity="center" > -->
+
+<!--         <ImageView -->
+<!--             android:id="@+id/serieDView" -->
+<!--             android:layout_width="290dp" -->
+<!--             android:layout_height="140dp" -->
+<!--             android:src="@drawable/serie_d" /> -->
+<!--     </LinearLayout> -->
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout2"
+        android:layout_marginBottom="1dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/aboutView"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:src="@drawable/about" />
+    </LinearLayout>
+
+<!--     <LinearLayout -->
+<!--         android:id="@+id/bannerLL" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="80dp" -->
+<!--         android:layout_alignParentBottom="true" > -->
+
+<!--         <TextView -->
+<!--             android:layout_width="281dp" -->
+<!--             android:layout_height="match_parent" -->
+<!--             android:gravity="center" -->
+<!--             android:text="Caricamento banner in corso..." -->
+<!--             android:textColor="@android:color/black" /> -->
+
+<!--     </LinearLayout> -->
+
+
+	 <LinearLayout
+            android:id="@+id/bannerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+        	android:layout_alignParentBottom="true" >
+        </LinearLayout>
+</RelativeLayout>
