@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:layout_height="35dip"
+    android:layout_height="45dip"
     android:gravity="center_vertical"
     android:paddingLeft="5dip"
-    android:background="@drawable/title">
+    android:background="@color/maincolor">
     
     <TextView
         android:text="@string/app_name"
-        android:textSize="24dp"
+        android:textSize="26sp"
         android:gravity="center_horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
