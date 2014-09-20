@@ -2,22 +2,8 @@ package com.arandroid.risultatilive;
 
 import java.util.ArrayList;
 
-import org.xml.sax.XMLReader;
-
-import com.Utils.EntryAdapter;
-import com.Utils.EntryItem;
-import com.Utils.Item;
-import com.Utils.SectionItem;
-import com.arandroid.risultatilive.ClassificaActivity.CaricaRis;
-import com.arandroid.risultatilive.core.GlobalState;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -25,19 +11,24 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.Html;
-import android.text.Html.TagHandler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
+
+import com.Utils.EntryAdapter;
+import com.Utils.EntryItem;
+import com.Utils.Item;
+import com.Utils.SectionItem;
+import com.arandroid.risultatilive.core.GlobalState;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 public class AboutActivityComplete extends Activity implements
 		OnItemClickListener {

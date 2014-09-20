@@ -16,10 +16,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.arandroid.risultatilive.RisultatiActivity.CaricaRis;
 import com.arandroid.risultatilive.core.GlobalState;
 import com.arandroid.risultatilive.core.Squadra;
-import com.arandroid.risultatilive.net.ClassificaReader;
 import com.arandroid.risultatilive.ui.ClassArrayAdapter;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;

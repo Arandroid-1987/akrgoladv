@@ -4,18 +4,12 @@ import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.ads.core.BannerManager;
-import com.ads.core.BannerView;
-import com.arandroid.risultatilive.BannerActivity;
-import com.arandroid.risultatilive.net.BannerReader;
 import com.arandroid.risultatilive.net.ClassificaReader;
 import com.arandroid.risultatilive.net.RisultatiReader;
 
 import android.app.Application;
 
 public class GlobalState extends Application {
-	private boolean bannerLoaded = false;
-	private boolean bannerDownloaded = false;
 	private boolean risultatiaggiornati;
 	private boolean classificaaggiornata;;
 	private boolean adsBannerShown=false;
@@ -52,34 +46,8 @@ public class GlobalState extends Application {
 		this.risultatiaggiornati = risultatiaggiornati;
 	}
 
-	public void storeBanners(List<BannerView> banners) {
-		BannerManager manager = BannerManager.getInstance();
-		manager.clearBanners();
-		for (BannerView bannerView : banners) {
-			manager.addBanner(bannerView);
-		}
-		bannerLoaded = true;
-	}
-
-	public void setupBanners(BannerActivity context) {
-		if (!bannerLoaded || !bannerDownloaded) {
-			BannerReader br = new BannerReader(context);
-			br.execute();
-		} else {
-			context.setupBanners();
-		}
-	}
-
-	public void setBannerDownloaded(boolean bannerDownloaded) {
-		this.bannerDownloaded = bannerDownloaded;
-	}
-
-	public void setBannerLoaded(boolean bannerLoaded) {
-		this.bannerLoaded = bannerLoaded;
-	}
 
 	public void reset() {
-		bannerLoaded = false;
 		ris = new Risultati();
 //		ris.setList(new LinkedList<Risultato>());
 		list = new LinkedList<Squadra>();
@@ -90,7 +58,7 @@ public class GlobalState extends Application {
 	public List<Squadra> getClassifica(String url) {
 		if (list == null || list.isEmpty() || list.size() == 1
 				|| risultatiaggiornati || classificaaggiornata) {
-			list = new ClassificaReader(getResources()).read(url);
+			list = new ClassificaReader().read(url);
 			risultatiaggiornati = false;
 			oraClass = dammiOra();
 		}
@@ -102,7 +70,7 @@ public class GlobalState extends Application {
 
 		if (ris == null || ris.getList()==null
 				|| classificaaggiornata || risultatiaggiornati) {
-			ris = new RisultatiReader(getResources()).read(url);
+			ris = new RisultatiReader().read(url);
 			classificaaggiornata = false;
 			ora = dammiOra();
 		}

@@ -17,22 +17,17 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
-import com.arandroid.risultatilive.core.Squadra;
-
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-public class ClassificaReader {
-	private Resources resources;
+import com.arandroid.risultatilive.core.Squadra;
 
-	public ClassificaReader(Resources resources) {
-		this.resources = resources;
+public class ClassificaReader {
+
+	public ClassificaReader() {
 	}
 
 	public List<Squadra> read(String feed) {
-//		String feed = "http://www.radioakr.it/sport/risultati-e-classifiche/eccellenza/";
-//		String feed = "http://www.radioakr.it/sport/risultati-e-classifiche/serie-d-girone-i/";
 		List<Squadra> ris = new LinkedList<Squadra>();
 		try {
 			URL url = new URL(feed);
