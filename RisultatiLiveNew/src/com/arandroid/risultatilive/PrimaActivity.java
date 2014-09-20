@@ -1,5 +1,6 @@
 package com.arandroid.risultatilive;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +10,6 @@ import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.ads.core.BannerManager;
 import com.arandroid.risultatilive.core.GlobalState;
 import com.arandroid.risultatilive.net.NetworkUtility;
 import com.arandroid.risultatilive.ui.DialogBuilder;
@@ -17,7 +17,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
-public class PrimaActivity extends BannerActivity implements OnClickListener {
+public class PrimaActivity extends Activity implements OnClickListener {
 	private View eccellenzaView;
 	private View primaView;
 	private View secondaView;

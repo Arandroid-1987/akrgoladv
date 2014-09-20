@@ -16,20 +16,15 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
-import android.content.res.Resources;
-
 import com.arandroid.risultatilive.core.Risultati;
 import com.arandroid.risultatilive.core.Risultato;
 
 public class RisultatiReader {
-	private Resources resources;
 
-	public RisultatiReader(Resources resources) {
-		this.resources = resources;
+	public RisultatiReader() {
 	}
 
 	public Risultati read(String feed) {
-//		feed = "http://www.radioakr.it/sport/risultati-e-classifiche/eccellenza/";
 		Risultati risultato = new Risultati();
 		List<Risultato> ris = new LinkedList<Risultato>();
 		risultato.setList(ris);
